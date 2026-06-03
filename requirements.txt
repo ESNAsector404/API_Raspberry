@@ -1,0 +1,3 @@
+fastapi
+RPi.GPIO
+uvicorn

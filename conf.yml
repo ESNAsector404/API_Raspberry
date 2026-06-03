@@ -1,0 +1,7 @@
+led1:
+  type: LED
+  pin: 7
+
+led2:
+  type: LED
+  pin: 11
