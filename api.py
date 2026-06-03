@@ -12,7 +12,6 @@ GPIO.setmode(GPIO.BOARD)
 
 app = FastAPI()
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origin_regex=r"http://localhost:\d+",
