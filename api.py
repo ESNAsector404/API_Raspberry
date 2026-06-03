@@ -26,6 +26,14 @@ print(devices)
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origin_regex=r"http://localhost:\d+",
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 devices = generateDeviceFromConfig(config)
 
 # On donne l'accès aux devices au module
