@@ -15,3 +15,7 @@ puis activation
 Installation des dependances
 
 `pip install -r requirements.txt`
+
+Lancement de l'API : 
+
+`python api.py`

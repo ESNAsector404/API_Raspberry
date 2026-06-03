@@ -4,7 +4,7 @@ class Led:
     def __init__(self, pin):
         self.pin = pin
         GPIO.setup(pin, GPIO.OUT)
-        GPIO.output(pin, GPIO.HIGH)
+        GPIO.output(pin, GPIO.LOW)
         print(f"LED initialized on pin {pin}")
     
     def on(self):
