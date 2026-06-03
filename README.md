@@ -18,7 +18,7 @@ Installation des dependances
 
 Lancement de l'API : 
 
-`python api.py`
+`python api.py` ou `uvicorn api:app --host 0.0.0.0 --port 8000`
 
 ## Création d'un service
 

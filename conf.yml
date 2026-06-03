@@ -2,6 +2,6 @@ led1:
   type: LED
   pin: 7
 
-led2:
-  type: LED
+servo1:
+  type: SERVO
   pin: 11
