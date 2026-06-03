@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
 from routes import ledRouteur
 import uvicorn
 import yaml
@@ -7,6 +9,17 @@ from util import generateDeviceFromConfig, cleanupDevices
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BOARD)
+
+app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origin_regex=r"http://localhost:\d+",
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 #Load configuration
 with open("conf.yml", "r") as file:
@@ -22,9 +35,6 @@ print(devices)
 # -------------------------
 # FASTAPI
 # -------------------------
-
-
-app = FastAPI()
 
 devices = generateDeviceFromConfig(config)
 
