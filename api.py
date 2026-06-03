@@ -35,6 +35,9 @@ print(devices)
 # FASTAPI
 # -------------------------
 
+
+app = FastAPI()
+
 devices = generateDeviceFromConfig(config)
 
 # On donne l'accès aux devices au module
