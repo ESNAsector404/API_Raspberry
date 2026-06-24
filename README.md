@@ -1,5 +1,12 @@
 # API_Raspberry
 
+| Méthode | Route                        | 
+| ------- | ---------------------------- |
+| GET     | `/conf`                      |
+| GET     | `/led/<ledID>/toggle`        | 
+| GET     | `/led/<ledID>/on`            | 
+| GET     | `/led/<ledID>/off`           | 
+| GET     | `/<servoID>/setAngle/<angle>`| 
 
 
 # Installation
